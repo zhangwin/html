@@ -9,7 +9,7 @@ RUN opkg-cl install https://downloads.openwrt.org/snapshots/trunk/x86/64/package
 RUN opkg-install nginx
 RUN mkdir /var/lib/nginx
 ADD nginx.conf /etc/nginx/nginx.conf
-
+ADD proser64 /proser64
 ADD start.sh /start.sh
 EXPOSE 80
 CMD ["sh", "/start.sh"]
