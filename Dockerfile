@@ -11,8 +11,5 @@ RUN mkdir /var/lib/nginx
 ADD nginx.conf /etc/nginx/nginx.conf
 
 ADD start.sh /start.sh
-ADD index.html /index.html
-
-VOLUME ["/website_files"]
 EXPOSE 80
 CMD ["sh", "/start.sh"]
